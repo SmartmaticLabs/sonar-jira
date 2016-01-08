@@ -68,7 +68,6 @@ public class LinkFunction implements Function, ServerExtension {
     checkProperty(JiraConstants.JIRA_CRITICAL_PRIORITY_ID, settings);
     checkProperty(JiraConstants.JIRA_BLOCKER_PRIORITY_ID, settings);
     checkProperty(JiraConstants.JIRA_ISSUE_TYPE_ID, settings);
-    checkProperty(JiraConstants.JIRA_ISSUE_COMPONENT_ID, settings);
   }
 
   private void checkProperty(String property, Settings settings) {
