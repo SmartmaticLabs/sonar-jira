@@ -87,6 +87,12 @@ public class JiraSoapServiceWrapper extends BasicJiraService {
 			issue.setComponents(new RemoteComponent[] { rc });
 		}
 
+	    String assignee = sonarIssue.assignee();
+	    if(assignee != null)
+	    {
+	    	issue.setAssignee(assignee);
+	    }
+	
 		return issue;
 	}
 

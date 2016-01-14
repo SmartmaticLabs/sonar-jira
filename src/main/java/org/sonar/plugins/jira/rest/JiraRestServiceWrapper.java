@@ -79,6 +79,13 @@ public class JiraRestServiceWrapper extends BasicJiraService {
 	    List<String> labels = getLabels();
 	    if(labels != null && !labels.isEmpty())
 	    	builder.setFieldValue(IssueFieldId.LABELS_FIELD.id, labels);
+	    
+	    String assignee = sonarIssue.assignee();
+	    if(assignee != null)
+	    {
+	    	builder.setAssigneeName(assignee);
+	    }
+	    
 	    IssueInput in = builder.build();
 	    
 	    
